@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>首页-<?php echo $game['name'];?> | 7725游戏</title>
+	<meta name="keyword" content="19you">
+	<meta name="description" content="19you">
+	<link rel="icon" href="/favicon.ico" type="image/x-icon"/> 
+	<link rel="stylesheet" href="__PUBLIC_GAME__css/game.css" />
+	<link rel="stylesheet" href="__PUBLIC_GAME__css/lightbox.css" />
+	<style>
+		.g-banner {
+			background: rgba(0, 0, 0, 0) url("<?php echo $game['picture']['background-1920x470'];?>") no-repeat scroll center top;
+			height: 470px;
+			width: 100%;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<!-- 顶栏 -->
+		<div class="g-top">
+			<div class="g-main">
+				<a href="<?php echo 'http://'.$host;?>" title="7725游戏" class="g-logo fl"> <h1>7725游戏</h1> </a>
+				<!-- 登陆状态
+				<div class="g-login fr">
+					<?php if(empty($_SESSION['user'])){?>
+					未登录 
+					<div class="g-login-no">
+						<a href="javascript:;" class="g-login-btn">登录</a> |
+						<a href="" class="g-reg-btn">注册</a>
+					</div>
+					<?php }else{?>
+					已登录
+					<div class="g-login-yes">
+						欢迎您 <span class="g-login-user" id="g-login-user"><?php echo $_SESSION['user']['loginname'];?></span>
+						<a href="<?php echo 'http://'.$host;?>/user_logout.html" class="g-login-out">注销</a>
+					</div>
+					<?php }?>
+				</div>-->
+			</div>
+		</div>
+		<!-- banner -->
+		<div class="g-banner g-banner-index">
+			<div class="g-main fix">
+				<div class="game-box fix">
+					<div class="game-logo fl"><img src="<?php echo $game['picture']['icon-144x144'];?>" alt="" width="144" height="144"></div>
+					<div class="game-intro fl">
+						<div class="game-intro-inner">
+							<h1 class="tit"><?php echo $game['name'];?></h1>
+							<p class="short"><?php echo mb_substr($game['content'],0,60,'utf-8');?>...</p>
+							<p class="long none"><?php echo $game['content'];?></p>
+							<a href="javascript:;" class="game-intro-opt fr"><span>展开</span> <i class="i-arrow"></i></a>
+						</div>
+						<i class="mask-bg none"></i>
+					</div>
+					<div class="game-down fl">
+						<a href="<?php if($game['isdown'] == 1) echo $game['downurl'];?>" target="_blank" class="a-down-android"></a>
+						<!-- <a href="#" target="_blank" class="a-down-ios"></a> -->
+					</div>
+					<div class="game-qr fl">
+						<div class="game-qr-pic fl"> <img src="<?php echo $game['picture']['qrcode'];?>" alt="" width="85" height="85"> </div>
+						<p class="fr">扫一扫下载</p>
+					</div>
+				</div>
+			</div>
+		</div>

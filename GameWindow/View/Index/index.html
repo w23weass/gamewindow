@@ -1,0 +1,317 @@
+<include file="Public/header" />
+<link rel="stylesheet" href="__PUBLIC__txdq/css/index.css">
+<!--头部背景视频-->
+<div class="box box0">
+    <div class="videobox">
+        <div id="j-video">
+        <!--<video width="100%" poster="http://jz.woniu.com/static/web201606/images/bg1.jpg" controls loop><source src="http://dl.yh.woniu.com/2016/03/bg.mp4" type="video/mp4"></video> -->
+        </div>
+    </div>
+</div>
+<!--第一屏-->
+<div class="box box1">
+    <img src="__PUBLIC__txdq/images/slogen.png" class="slogen">
+   
+    <!-- <a href="javascript:;" class="pause none"></a> -->
+    <!--下载版本模板 勿删-->
+    <div class="download">
+        <div class="downbg"></div>
+        <div class="cont">
+            <p>扫一扫 下载游戏</p>
+            <img src="__PUBLIC__txdq/images/dl_ewm.png" class="dl_ewm" width="125px" height="125px">
+            
+            <a href="javascript:alert('敬请期待！')"><img src="__PUBLIC__txdq/images/dl_1.png" class="dl_btn dl_1"></a>
+            <a href="http://dl.7725.com/txdq/yn7725/txdq_yn7725_5.apk"><img src="__PUBLIC__txdq/images/dl_2.png" class="dl_btn dl_2"></a>
+            <a href="javascript:;" class="play" status="0"></a>
+        </div>
+    </div>
+
+</div>
+
+<!--第2屏-->
+<div class="box box2">
+    <div class="slider_b">
+        <ul style="width: 7730px;">
+        <foreach name="assign['focus_middle_pic']" item="vo">
+            <li style="background: transparent url({$vo.images}) no-repeat scroll center top; width: 1920px;">
+                <h2>{$vo.title}</h2>
+                <p>{$vo.subtitle}</p>
+            </li>
+        </foreach>
+        </ul>
+    </div>
+    <div class="phone">
+        <div class="slider_s">
+            <ul style="width: 2140px;">
+                <foreach name="assign['focus_middle1_pic']" item="vo">
+                    <li><img src="{$vo.images}"></li>
+                </foreach>
+            </ul>
+        </div>
+        <div class="slider_p"><span class="current"></span><span></span><span></span><span></span></div>
+        <a href="javascript:;" class="btn prev"></a>
+        <a href="javascript:;" class="btn next"></a>
+    </div>
+</div>
+
+<!--第三屏-->
+<div class="box box3">
+    <div class="main">
+        <div class="subbox subbox_b news">
+            <div class="tit">
+                <div class="titbg"></div>
+                <div class="tit-nav">
+                    <span class="current">综合</span>
+                    <span>新闻</span>
+                    <span>公告</span>
+                    <span>活动</span>
+                    <span>攻略</span>
+                    <a href="news_index.html" target="_blank">+</a>
+                </div>
+            </div>
+            <div class="cont">
+                <div class="contbg"></div>
+                <dl>
+                <foreach name="assign['group_rows']" key="k" item="vo">
+                        <eq name="k" value='0'>
+                            <dt><a href="news_details.html?id={$vo.id}" target="_blank">{$vo.title}</a></dt>
+                        <else/>
+                            <dd><span>{$vo.addtime|date="m-d",###}</span><a href="news_details.html?id={$vo.id}" target="_blank">{$vo.title}</a></dd>
+                        </eq>
+                </foreach>
+                </dl>
+                <dl class="none">
+                <foreach name="assign['news_rows']" key="k" item="vo">
+                        <eq name="k" value='0'>
+                            <dt><a href="news_details.html?id={$vo.id}" target="_blank">{$vo.title}</a></dt>
+                        <else/>
+                            <dd><span>{$vo.addtime|date="m-d",###}</span><a href="news_details.html?id={$vo.id}" target="_blank">{$vo.title}</a></dd>
+                        </eq>
+                </foreach>
+                </dl>
+                <dl class="none">
+                <foreach name="assign['notice_rows']" key="k" item="vo">
+                        <eq name="k" value='0'>
+                            <dt><a href="news_details.html?id={$vo.id}" target="_blank">{$vo.title}</a></dt>
+                        <else/>
+                            <dd><span>{$vo.addtime|date="m-d",###}</span><a href="news_details.html?id={$vo.id}" target="_blank">{$vo.title}</a></dd>
+                        </eq>
+                </foreach>
+                </dl>
+                <dl class="none">
+                <foreach name="assign['activity_rows']" key="k" item="vo">
+                        <eq name="k" value='0'>
+                            <dt><a href="news_details.html?id={$vo.id}" target="_blank">{$vo.title}</a></dt>
+                        <else/>
+                            <dd><span>{$vo.addtime|date="m-d",###}</span><a href="news_details.html?id={$vo.id}" target="_blank">{$vo.title}</a></dd>
+                        </eq>
+                </foreach>
+                </dl>
+                <dl class="none">
+                <foreach name="assign['policy_rows']" key="k" item="vo">
+                    <eq name="k" value='0'>
+                        <dt><a href="news_details.html?id={$vo.id}" target="_blank">{$vo.title}</a></dt>
+                    <else/>
+                        <dd><span>{$vo.addtime|date="m-d",###}</span><a href="news_details.html?id={$vo.id}" target="_blank">{$vo.title}</a></dd>
+                    </eq>
+                </foreach>
+
+                </dl>
+            </div>
+        </div>
+
+                <div class="subbox subbox_s info">
+            <div class="slider">
+                <ul style="width: 1088px;">
+                                        <li>
+                        <a href="" target="_blank"><img src="__PUBLIC__txdq/images/1.jpg" width="272" height="332"></a>
+                        <div class="text"></div>
+                        <a>
+                            <h3></h3>
+                            <p></p>
+                        </a>
+                    </li>
+                                       <li>
+                        <a href="" target="_blank"><img src="__PUBLIC__txdq/images/2.jpg" width="272" height="332"></a>
+                        <div class="text"></div>
+                        <a>
+                            <h3></h3>
+                            <p></p>
+                        </a>
+                    </li>
+                                       <li>
+                        <a href="" target="_blank"><img src="__PUBLIC__txdq/images/3.jpg" width="272" height="332"></a>
+                        <div class="text"></div>
+                        <a >
+                            <h3></h3>
+                            <p></p>
+                        </a>
+                    </li>
+                       <!--                 <li>
+                                               <a ><img src="__PUBLIC__txdq/images/4.jpg" width="272" height="332"></a>
+                                               <div class="text"></div>
+                                               <a>
+                                                   <h3></h3>
+                                                   <p></p>
+                                               </a>
+                                           </li> -->
+                                   </ul>
+            </div>
+            <div class="page"><span class=""></span><span class=""></span><span class="current"></span><span class=""></span></div>
+        </div>
+
+        <div class="subbox subbox_s feature">
+            <div class="tit">
+                <div class="titbg"></div>
+                <h3>资料站</h3>
+                <p>Game features</p>
+            </div>
+            <div class="cont">
+                <a href="photo_index.html" class="more">立即查看</a>
+            </div>
+        </div>
+
+    <div class="subbox subbox_b media">
+    <div class="tit">
+        <div class="titbg"></div>
+        <div class="tit-nav">
+               <span class="">18183</span>
+               <span>安趣网</span>
+               <span>笨手机</span>
+               <span class="current">1688玩</span>
+               <span>优游网</span>
+        </div>
+    </div>
+    <div class="cont">
+        
+        
+        
+        <div class="contbg"></div>
+    <iframe scrolling="no" src="http://www.18183.com/api/temone/?typeid=22003" class="m-cont" style="display: none;">
+        
+    </iframe>
+    <iframe scrolling="no" src="http://api.anqu.com/embed/txdqsy/" class="m-cont none" style="display: none;">
+        
+    </iframe>
+    <iframe scrolling="no" src="http://www.benshouji.com/pages/txdq.htm" class="m-cont none" style="display: none;">
+        
+    </iframe>
+    <iframe scrolling="no" src="http://www.1688wan.com/push/push_txdq.html" class="m-cont none" style="display: block;">
+        
+    </iframe>
+    <iframe scrolling="no" src="http://qt.yoyou.com/txdq/68.html" class="m-cont none" style="display: none;">
+        
+    </iframe> 
+
+                        <!-- <div class="flink">
+                                    <a href="javascript:;" class="prev"></a>
+                                    <a href="javascript:;" class="next"></a>
+                                    <div class="slider">
+                                        <div class="flinklist" style="width: 4902px;">
+                                                <a href="http://game.91.com/" target="_blank"><img src=/8f0523bafeb27d6324d3bac8466b1d7e.png" width="104" height="40"></a>
+                                                <a href="http://www.1688wan.com/" target="_blank"><img src=/d770c53a2921019c5e365d3fa3603382.png" width="104" height="40"></a>
+                                                <a href="http://www.4399.cn/" target="_blank"><img src=/253eea83f0728697729942ac96dfe808.png" width="104" height="40"></a>
+                                                <a href="http://www.5253.com/" target="_blank"><img src=/f2b43289f4c0c243dcb75d6ff9cfa0ce.jpg" width="104" height="40"></a>
+                                                <a href="http://www.17173.com/" target="_blank"><img src=/c7a797de4966ce219386f2ba48f51525.png" width="104" height="40"></a>
+                                                <a href="http://www.18183.com/" target="_blank"><img src=/e79b05a36604d360838146ee7800813c.jpg" width="104" height="40"></a>
+                                                <a href="http://www.yoyojie.com/" target="_blank"><img src=/9dc88af396c80d15402e401802efb063.png" width="104" height="40"></a>
+                                                <a href="http://www.anfan.com/" target="_blank"><img src=/f2233a86ea197587ebf4441c2dfab8da.png" width="104" height="40"></a>
+                                                <a href="http://www.anqu.com/" target="_blank"><img src=/0f0916560b91e9d26121e5772eb7164a.png" width="104" height="40"></a>
+                                                <a href="http://www.benshouji.com/" target="_blank"><img src=/4b654cfdff37acf14f7c8b3ce8408e54.png" width="104" height="40"></a>
+                                                <a href="http://www.bufan.com/" target="_blank"><img src=/5ad19cec25e252688861c4e5d9d1801b.png" width="104" height="40"></a>
+                                                <a href="http://www.18touch.com/" target="_blank"><img src=/4703b3616b03daa5a0177c0fb67e13c7.png" width="104" height="40"></a>
+                                                <a href="http://www.gao7.com/" target="_blank"><img src=/958da3cfe47b637b5e15b5d538a36fea.png" width="104" height="40"></a>
+                                                <a href="http://www.mofang.com/" target="_blank"><img src=/003f213185443c26ef95728a98cf91e0.png" width="104" height="40"></a>
+                                                <a href="http://www.wankr.com.cn/" target="_blank"><img src=/b6f09ce553e81e1f985aa07229751202.png" width="104" height="40"></a>
+                                                <a href="http://play.163.com/" target="_blank"><img src=/bab98bdee6f18e1cf624dd1806c8c0a4.png" width="104" height="40"></a>
+                                                <a href="http://www.yzz.cn/" target="_blank"><img src=/6119cf12d4bbba8234bd37c683748684.png" width="104" height="40"></a>
+                                                <a href="http://www.youxiduo.com/" target="_blank"><img src=/14b96851caae0eb916bb640cec635290.png" width="104" height="40"></a>
+                                                <a href="http://www.gamedog.cn/" target="_blank"><img src=/696033207214e1dcad5d80250df982e4.png" width="104" height="40"></a>
+                                                <a href="http://m.ali213.net/" target="_blank"><img src=/570d3b3c4c1e5c6ca74cdd60db7ccee9.png" width="104" height="40"></a>
+                                                <a href="http://www.joyme.com/" target="_blank"><img src=/2685f679eaccba21c3db1a3adfa628f0.png" width="104" height="40"></a>
+                                                <a href="http://www.5g.com/" target="_blank"><img src=/1a6686936d04012b548c056eb40144ad.png" width="104" height="40"></a>
+                                                <a href="http://www.66u.com/" target="_blank"><img src=/12f7dc57dda2d1cfcf6748b1dca02b26.png" width="104" height="40"></a>
+                                                <a href="http://www.87g.com/" target="_blank"><img src=/0acd8014877895ba236d967b89d54778.png" width="104" height="40"></a>
+                                                <a href="http://www.8477.com/" target="_blank"><img src=/c1f6157a704e5c7f36a2cd71055ad006.jpg" width="104" height="40"></a>
+                                                <a href="http://www.11773.com/" target="_blank"><img src=/0abcb4ac411038be1e64bf0229a7ac51.jpg" width="104" height="40"></a>
+                                                <a href="http://www.ewoka.com/" target="_blank"><img src=/83b509d47f12014e0029248377749735.jpg" width="104" height="40"></a>
+                                                <a href="http://www.bianwanjia.com/" target="_blank"><img src=/44c149b1a140b3d5eebf2fb1f6c50dca.png" width="104" height="40"></a>
+                                                <a href="http://www.candou.com/" target="_blank"><img src=/7ecaa894a8f361954089f40ec026a837.png" width="104" height="40"></a>
+                                                <a href="http://www.kaifu.com/" target="_blank"><img src=/2ecb14ee8d6dcbd2952db52faf69330a.png" width="104" height="40"></a>
+                                                <a href="http://www.pipaw.com/" target="_blank"><img src=/466617068dd93d003c03c62488ff726d.png" width="104" height="40"></a>
+                                                <a href="http://www.7xz.com/" target="_blank"><img src=/177000ce54b3b8c12415e6415f191e62.png" width="104" height="40"></a>
+                                                <a href="http://www.yoyou.com/" target="_blank"><img src=/fe87eb84bcf28c9264c2b0e7109f23fe.png" width="104" height="40"></a>
+                                                <a href="http://www.youxibao.com/" target="_blank"><img src=/e490de469da38097cfd2b7c7aec8faaa.png" width="104" height="40"></a>
+                                                <a href="http://www.xiaopi.com/" target="_blank"><img src=/a900c97bfa8922d06e735555b6e2db07.png" width="104" height="40"></a>
+                                                <a href="http://www.duouoo.com/" target="_blank"><img src=/4bb409f9a8055a1a526b1e72319df820.jpg" width="104" height="40"></a>
+                                                <a href="http://www.93636.com/" target="_blank"><img src=/a00418606980469c743516fc6fc15ce8.jpg" width="104" height="40"></a>
+                                                <a href="http://www.douyu.com/" target="_blank"><img src=/5f3f6e924d8f4991dfb37ba611723a18.jpg" width="104" height="40"></a>
+                                                <a href="http://www.huya.com/" target="_blank"><img src=/8f014ee4cc7857d7f1d53621f856d171.jpg" width="104" height="40"></a>
+                                                <a href="http://www.longzhu.com/" target="_blank"><img src=/8ba2ab1d4c0832f519d4c7b36f9d49a6.jpg" width="104" height="40"></a>
+                                                <a href="http://www.panda.tv/" target="_blank"><img src=/9baa2e64bd56ffff9f6b904d552859af.jpg" width="104" height="40"></a>
+                                                <a href="http://www.zhanqi.tv/" target="_blank"><img src="" width="104" height="40"></a>
+                                                <a href="http://wy.77l.com/" target="_blank"><img src=/bc413c22e016c97ab55e5ecff75ce336.png" width="104" height="40"></a>
+                                            </div>
+                                    </div>
+                        
+                                </div> -->
+
+    </div>
+</div> 
+
+        <div class="subbox subbox_s sns">
+    <div class="tit">
+        <div class="titbg"></div>
+        <h3>关注官方公众号</h3>
+        <p>礼包活动抢先看</p>
+    </div>
+    <div class="cont">
+        <div class="contbg"></div>
+        <a href="#" class="a1">
+                  <img src="__PUBLIC__txdq/images/sns-ewm.png" class="none" width="125" height="125">
+                </a>
+<a href="https://jq.qq.com/?_wv=1027&k=4C4mOzm" class="a2" target="_blank"></a>
+<a href="http://weibo.com/u/6163246828?is_hot=1" class="a3" target="_blank"></a>
+<!-- <a href="http://tieba.baidu.com/f?kw=%E4%B9%9D%E9%98%B4%E5%86%B3%E6%88%98&amp;fr=wwwt" class="a4" target="_blank"></a> -->
+    </div>
+</div> 
+
+        <div class="subbox subbox_s service">
+            <div class="tit">
+                <div class="titbg"></div>
+                <h3>7725客服中心</h3>
+
+            </div>
+            <div class="cont">
+                <div class="contbg"></div>
+                <div class="link">
+
+                </div>
+                <p class="tel">
+                    客服专线： 400-8321011
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- <div class="floatbar floatorder">
+        <img src="__PUBLIC__txdq/images/wxewm.jpg" class="dl_ewm" width="108">
+</div> -->
+
+<!--滚动提示-->
+<div class="scroll-tip" style="display: block;"></div>
+
+</div>
+
+<div class="maskdiv none"></div>
+<div class="popbox pop-video none">
+    <span class="close"></span><div id="j-popvideo"></div>
+</div>
+<include file="Public/footer" />
+<script charset="utf-8" src="__PUBLIC__txdq/js/jquery-1.js"></script>
+<script src="__PUBLIC__txdq/js/jquery.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" src="__PUBLIC__txdq/js/jwplayer.js"></script>
+<script type="text/javascript" src="__PUBLIC__txdq/js/live.js"></script>
+<script src="__PUBLIC__txdq/js/index.js"></script>
+<script type="text/javascript" src="__PUBLIC__txdq/js/statistics_ty_v1.js"></script>

@@ -1,0 +1,124 @@
+<include file="Public/header" />
+		<div class="g-banner">
+			<div class="slide-index fl" id="slide-index">
+				<ul class="slide-bd">
+					<foreach name="assign['banner_rows']" item="vo" >
+					<li><a href="{$vo.url}" target="_blank"><img src="{$vo.images}" alt="{$vo.title}" width="1920" height="500" /></a></li>
+					</foreach>					
+				</ul>
+			</div>		
+		</div>
+		<div class="g-mian">
+			<div class="g-hor-middle">
+				<div class="g-recommend top20">
+					<div class="g-content-top">
+						<div class="fl">
+							<p class="title">推荐手游</p>
+						</div>
+						<div class="fr">
+							<a href="game_index.html">MORE+</a>
+						</div>
+					</div>
+					<div class="g-content">
+						<ul>
+							<foreach name="assign['game_recommend_rows']" item="vo">
+							<li>
+								<div><a href="game_gamedetails.html?id={$vo.gameid}"><img src="{$vo.images}" alt="{$vo.name}" width="360" height="160" /></a></div>
+								<div>
+									<div class="content-details fl">
+										<p>{$vo.name}</p>
+										<p>{$vo.summary}</p>
+									</div>
+									<div class="content-links fr">
+										<div>
+											<a href="{$vo.downurl}"><button>下载</button></a>
+											<a href= <if condition="$vo.card_id eq null ">"{$vo.jumpurl}"<else />"gift_giftdetails.html?id={$vo.card_id}"</if>><button>礼包</button></a>
+										</div>
+									</div>
+								</div>
+							</li>
+							</foreach>							
+						</ul>
+					</div>
+				</div>
+				<div class="g-hots-news top20">
+					<div class="g-hots fl">
+						<div class="g-content-top">
+							<div class="fl">
+								<p class="title">热门游戏</p>
+							</div>
+							<div class="fr">
+								<a href="game_index.html">MORE+</a>
+							</div>
+						</div>
+						<div class="g-content">
+							<ul>
+							<foreach name="assign['game_hots_rows']" item="vo">
+								<li>
+									<a href="game_gamedetails.html?id={$vo.gameid}"><div class="fl"><img src="{$vo.game_picture}" width="80" height="80"></div></a>
+									<div class="details fl">
+										<a href="game_gamedetails.html?id={$vo.gameid}"><p>{$vo.game_name}</p></a>
+										<p>{$vo.game_theme}|{$vo.game_size}|<if condition="$vo['down'] gt 10">{$vo.down}</if>下载</p>
+										<a href=<if condition="$vo.card_id eq null ">"{$vo.jumpurl}"<else />"gift_giftdetails.html?id={$vo.card_id}"</if>><button class="gift">礼包</button></a>
+										<a href="{$vo.downurl}"><button class="down">下载</button></a>
+									</div>
+								</li>
+							</foreach>
+							</ul>
+						</div>
+					</div>
+					<div class="g-news fr">
+						<div class="g-content-top">
+							<div class="fl">
+								<p class="title">新闻公告</p>
+							</div>
+							<div class="fr">
+								<a href="news_index.html">MORE+</a>
+							</div>							
+						</div>
+						<div class="g-content">
+							<div class="focus-image">
+								<a href="{$assign['focus_pic_rows']['0']['jumpurl']}"><img src="{$assign['focus_pic_rows']['0']['images']}" width="320" height="60"></a>
+								<p><a href="{$assign['focus_pic_rows']['0']['jumpurl']}">{$assign['focus_pic_rows']['0']['title']}</a></p>
+							</div>
+							<ul>
+								<foreach name="assign['news_rows']" item="vo">
+									<li><a href="news_details.html?id={$vo.id}">{$vo.title}</a><span>{$vo.edittime|date="m-d",###}</span></li>				
+								</foreach>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="g-gift top20">
+					<div class="g-content-top">
+						<div class="fl">
+							<p class="title">礼包中心</p>
+						</div>
+						<div class="fr">
+							<a href="gift_index.html">MORE+</a>
+						</div>						
+					</div>
+					<div class="g-content">
+						<ul>
+							<foreach name="assign['card_type_rows']" item="vo">
+							<li>
+								<div class="fl"><img src="{$vo.game_picture}" width="80" height="80"></div>
+								<div class="details fl">
+									<a href="gift_giftdetails.html?id={$vo.id}"><p>{$vo.game_name}</p></a>
+									<p>{$vo.name}</p>
+									<a href="gift_giftdetails.html?id={$vo.id}"><button>点击领取</button></a>
+								</div>
+							</li>
+							</foreach>
+						</ul>
+					</div>
+				</div>
+				<div class="g-bottom-image top20">
+					<a href="#"><img src="{$assign['focus_pic_laster_rows']['0']['images']}" style="height:85px;"/></a>
+				</div>
+			</div>
+		</div>
+<include file="Public/footer" />
+<script type="text/javascript">
+
+</script>

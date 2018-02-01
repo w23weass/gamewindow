@@ -1,0 +1,30 @@
+		<div class="c-mian">
+			<div class="c-hor-middle">	
+				<div class="center-type-box">
+					<div class="c-content">
+						<div class="center-type-left">
+							<img width="100px" height="100%" src="{$assign['user_row']['pic']}" />
+							<ul>
+								<li>您好&nbsp;:&nbsp;<span>{$assign['user_row']['nickname']}</span></li>
+								<li>账号名&nbsp;:&nbsp;<span>{$assign['user_row']['loginname']}</span></li>
+								<li>账户登录时间&nbsp;:&nbsp;<span>{$assign['user_row']['lasttime']|date='Y-m-d H:i:s',###}</span></li>
+							</ul>
+							<a href="user_logout.html">[退出]</a>
+						</div>		
+						<div class="center-type-right">
+							<ul>
+							<foreach name="assign['card_type_rows']" item="vo">
+								<li>
+									<div class="fl"><a href="gift_giftdetails.html?id={$vo.id}"><img src="{$vo.game_picture}" width="80" height="80"></a></div>
+									<div class="details fl">
+										<a href="gift_giftdetails.html?id={$vo.id}" title="{$vo.game_name}"><p>{$vo.game_name}</p></a>
+										<p>{$vo.name}</p>
+										<a href="gift_giftdetails.html?id={$vo.id}"><button>点击领取</button></a>
+									</div>
+								</li>
+							</foreach>
+						</ul>
+						</div>		
+					</div>
+				</div>
+			</div>

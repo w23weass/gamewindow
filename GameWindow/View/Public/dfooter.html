@@ -1,0 +1,29 @@
+		<div class="d-footer">
+			<div class="g-hor-middle">
+				<div class="g-flink">
+					<span>友情链接：</span>
+					<!-- 循环输出友链 -->
+					<foreach name="links" item="v" >
+					<a href="{$v.url}" target="_blank">{$v.name}</a>
+					</foreach>					
+				</div>
+				<div class="company-info fix">
+					<a href="http://www.7725.com" title="7725游戏" ><div class="footer-logo fl"></div></a>
+					<div class="cpinfo fl">
+						<p class="cplink">
+							<foreach name="fcolumns" item="v" >
+							<a href="{$v.url}" target="_blank"> {$v.name}</a> - 
+							</foreach>								
+						</p>
+						<p>广州杰茜卡信息科技有限公司   版权所有  <a style="color:#999999;" href='http://www.miitbeian.gov.cn' target='blank'>粤ICP备17000485号-1</a>  <a style="color:#999999;" href='http://resource.7725.com/Home/杰茜卡-文网文.jpg' target='blank'>粤网文[2017] 1854-227号 </a></p>
+						<p>文化部网络游戏举报和联系电子邮箱：wlwh@vip.sina.com</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+	<script type="text/javascript" src="__PUBLIC__js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="__PUBLIC__js/main.js"></script>
+</body>
+</html>

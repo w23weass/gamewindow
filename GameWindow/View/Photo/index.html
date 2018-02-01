@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html class=" video"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>7725铁血大秦</title>
+    <meta name="description" content="7725铁血大秦">
+    <meta name="keywords" content="7725铁血大秦">
+    <!--Design:swhy @ Coding:wangjia cms：zhutianjie-->
+    <link rel="stylesheet" href="__PUBLIC__txdq/css/wn-gamehead-1.css" media="all"><link rel="stylesheet" href="__PUBLIC__txdq/css/base.css">
+    <link rel="stylesheet" href="__PUBLIC__txdq/css/common.css">
+    <link rel="stylesheet" href="__PUBLIC__txdq/css/data.css" />
+    <script type="text/javascript" src="__PUBLIC__txdq/js/freeStore_foot.js"></script><script type="text/javascript" src="__PUBLIC__txdq/js/statistics_ty_v1.js"></script><script type="text/javascript" src="__PUBLIC__txdq/js/modernizr.js"></script>
+    <script charset="utf-8" src="__PUBLIC__txdq/js/jquery-1.js"></script>
+    <script type="text/javascript" src="__PUBLIC__txdq/js/photo.js"></script>
+<link rel="stylesheet" href="__PUBLIC__txdq/css/live.css" id="ui_popbroad_" style=""><link rel="stylesheet" type="text/css" href="__PUBLIC__txdq/css/pub-footer.css"></head>
+
+<body>
+    <div class="bg">
+        <div class="topbox">
+            <a href="http://txdq.7725.com/" target="_blank"><img src="__PUBLIC__txdq/images/jz.png" class="logo"></a>
+            <div class="menu">
+                <div class="widget-ztlink">
+                    <a href="index_index.html" target="_blank" class="link link1">进入官网</a> <span>|</span>
+                    <a href="news_index.html" target="_blank" class="link link2">新闻中心</a> 
+                    <!-- <span>分享到：</span>
+                    <div class="sharebox" id="wnshare">
+                        <a href="javascript:;" class="wx">微信二维码</a>
+                        <a href="javascript:;" class="tsina">新浪微博</a>
+                        <a href="javascript:;" class="qzone">QQ空间</a>
+                        <a href="javascript:;" class="qq">QQ好友</a>
+                        <div class="ewm none">
+                            <img src="__PUBLIC__txdq/images/wx_ewm.png">
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+        <div class="main">
+            <div class="left">
+                <h3>扫一扫 更多内测资格</h3>
+                <img src="__PUBLIC__txdq/images/dl_ewm.png" width="150">
+                <img width="150">
+                <div class="down">
+                    <a href="javascript:alert(&#39;敬请期待！&#39;)" class="a1"></a>
+                    <a href="http://dl.7725.com/txdq/yn7725/txdq_yn7725_5.apk" class="a2"></a>
+                
+                </div>
+                <h4>铁血大秦玩家互动</h4>
+                <h3 class="sub">—— 礼包活动抢先看 ——</h3>
+                <div class="sns">
+                    <a href="javascript:;" class="a1">微信</a>
+                    <!-- <a target="_blank" href="http://tieba.baidu.com/f?kw=%E4%B9%9D%E9%98%B4%E5%86%B3%E6%88%98&amp;fr=wwwt" class="a2">贴吧</a> -->
+                    <a target="_blank" href="https://jq.qq.com/?_wv=1027&k=4C4mOzm" class="a3">QQ群</a>
+                    <a target="_blank" href="http://weibo.com/u/6163246828?is_hot=1" class="a4">微博</a>
+                    <img src="__PUBLIC__txdq/images/wx_ewm.png" width="171" class="none">
+                </div>
+            </div>
+            <div class="right">
+                <div class="imglink">
+                    <div class="imglist" id="banner"></div>
+                </div>
+                <h2 id="section1">
+                    <i></i>游戏背景<span>GAME BACKGROUND</span>
+                </h2>
+                <div class="cont" id="gameinfo">
+                    <foreach name="assign['gamebackgroup_rows']" item="vo">
+                    <a href="news_details.html?id={$vo.id}&status=photo" target="_blank">{$vo.title}</a>
+                    </foreach>
+                </div>
+
+                <h2 id="section2">
+                    <i></i>新手入门<span>NOVICE INTRODUCTION</span>
+                </h2>
+                <div class="cont">
+                    <div class="item">
+                        <b>门派</b>
+                        <div class="links" id="menpai">
+                        <foreach name="assign['accidence_rows']" item="vo">
+                            <a href="news_details.html?id={$vo.id}&status=photo" target="_blank">{$vo.title}</a>
+                        </foreach>
+                        </div>
+                    </div>
+                    <!-- <div class="item">
+                        <b>职业</b>
+                        <div class="links" id="zhiye"></div>
+                    </div> -->
+                    <div class="item">
+                        <b>技能</b>
+                        <div class="links" id="jineng">
+                        <foreach name="assign['accidence2_rows']" item="vo">
+                            <a href="news_details.html?id={$vo.id}&status=photo" target="_blank">{$vo.title}</a>
+                        </foreach>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 id="section3">
+                    <i></i>基础信息<span>BASIC INFORMATION</span>
+                </h2>
+                <div class="cont">
+                    <foreach name="assign['base_rows']" item="vo">
+                            <a href="news_details.html?id={$vo.id}&status=photo" target="_blank">{$vo.title}</a>
+                    </foreach>
+                </div>
+
+                
+
+                <div class="guide" id="links"></div>
+            </div>
+        </div>
+    </div>
+<include file="Public/footer" />

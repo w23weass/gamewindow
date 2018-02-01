@@ -1,0 +1,26 @@
+<include file="Public/header" />
+<script charset="utf-8" src="__PUBLIC__txdq/js/jquery-1.js"></script><script type="text/javascript" src="__PUBLIC__txdq/js/news.js"></script>
+    <link rel="stylesheet" href="__PUBLIC__txdq/css/news.css">
+    <div class="newsbox">
+        <div class="news-tit">
+            <div class="menu">
+                <a href="news_index.html" <if condition="($assign['news_type'] neq activity) and ($assign['news_type'] neq notice) and ($assign['news_type'] neq policy) and ($assign['news_type'] neq news) ">class="current"</if> >综合</a>
+                <a href="news_index.html?type=news" <if condition="$assign['news_type'] eq news">class="current"</if> >新闻</a>
+                <a href="news_index.html?type=notice" <if condition="$assign['news_type'] eq notice">class="current"</if> >公告</a>
+                <a href="news_index.html?type=activity" <if condition="$assign['news_type'] eq activity">class="current"</if> >活动</a>
+                <a href="news_index.html?type=policy" <if condition="$assign['news_type'] eq policy">class="current"</if> >攻略</a>
+            </div>
+        </div>
+        <div class="newslist">
+            <ul>
+                <foreach name="assign['new_list']" item="vo">
+                    <li><span>{$vo.addtime|date="m-d",###}</span><a href="news_details.html?id={$vo.id}" target="_blank">{$vo.title}</a></li>
+                </foreach>
+            </ul>
+            <div class="page">
+                {$assign['paging']}
+            </div> 
+        </div>
+    </div>
+</div>
+<include file="Public/footer" />                                                                                                                                                                                       		

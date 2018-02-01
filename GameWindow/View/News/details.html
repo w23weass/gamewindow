@@ -1,0 +1,31 @@
+<include file="Public/header" />
+<link rel="stylesheet" href="__PUBLIC__txdq/css/details.css">
+    <div class="newsbox">
+        <div class="news-tit">
+            <div class="position">您所在位置：<a href="index_index.html">首页</a>&gt;
+            <if condition="$assign['status'] eq 'photo'"><a href="photo_index.html">游戏资料</a>
+                <else /> 
+                    <a href="news_index.html">新闻中心</a>
+            </if>
+            </div>
+        </div>
+
+        <div class="detailbox">
+            <h2>{$assign['news_rows']['title']}</h2>
+            <div class="info">
+                <p class="ptime">{$assign['news_rows']['addtime']|date = 'Y-m-d',###}</p><p class="font">字体【<i>小</i><i>中</i><i>大</i>】 </p> 
+                <p class="share"></p>
+                <!-- <div class="bdsharebuttonbox bdshare-button-style0-16" data-bd-bind="1493814566940"><a href="http://jz.woniu.com/material/menpai/2016/0818/37172.html#" class="bds_more" data-cmd="more"></a><a href="http://jz.woniu.com/material/menpai/2016/0818/37172.html#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="http://jz.woniu.com/material/menpai/2016/0818/37172.html#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="http://jz.woniu.com/material/menpai/2016/0818/37172.html#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="http://jz.woniu.com/material/menpai/2016/0818/37172.html#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="http://jz.woniu.com/material/menpai/2016/0818/37172.html#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a></div>
+                <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script><p></p> -->
+            </div>
+            <div class="content">
+               {$assign['news_rows']['content']}
+            </div>
+
+        </div>
+    </div>
+
+</div>
+<include file="Public/footer" />
+<script charset="utf-8" src="__PUBLIC__txdq/js/jquery-1.js"></script>
+<script src="__PUBLIC__txdq/js/news.js"></script>

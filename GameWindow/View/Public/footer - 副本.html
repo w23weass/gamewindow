@@ -1,0 +1,93 @@
+		<div class="g-footer">
+			<div class="g-main">
+				<div class="g-flink">
+					<span>友情链接</span>
+					<!-- 循环输出友链 -->
+					<?php foreach($links as $k=>$v){?>
+					<a href="<?php echo $v['url'];?>" target="_blank"><?php echo $v['name'];?></a>					
+					<?php }?>
+				</div>
+				<div class="company-info fix">
+					<a href="http://www.7725.com" title="7725游戏" class="footer-logo fl"></a>
+					<div class="cpinfo fl">
+						<p class="cplink">
+							<?php foreach($fcolumns as $k=>$v){?>
+							<a href="<?php echo $v['url'];?>" target="_blank"><?php echo $v['name'];?></a><?php if(!(count($fcolumns)-1 == $k)){?> - <?php }?> 
+							<?php }?>							
+						</p>
+						<p>广州杰茜卡信息科技有限公司   版权所有   <a style='color:#fff' href='http://www.miitbeian.gov.cn' target='blank'>粤ICP备17000485号-1</a>  <a style='color:#fff' href='http://resource.7725.com/Home/杰茜卡-文网文.jpg' target='blank'>粤网文[2017] 1854-227号 </a></p>
+						<p>文化部网络游戏举报和联系电子邮箱：wlwh@vip.sina.com</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 侧边功能 -->
+	<div class="sidefun" id="sidefun">
+		<a href="#" title="返回顶部" class="totop" id="totop"></a>
+		<div class="sideqr">
+			<a href="javascript:;" title="" class="sideqr-trigger"></a>
+			<div class="qr-main">
+				<i class="i-coner"></i>
+				<img src="__PUBLIC__images/qr.jpg" alt="" width="166" height="166">
+				<p>关注7725游戏微信</p>
+			</div>
+		</div>
+	</div>
+	<!-- 弹窗登陆 -->
+	<i class="mask none" id="mask"></i>
+	<div class="g-pop-login pop-box none">
+		<a href="javascript:;" title="关闭" class="pop-close" id="pop-close">x</a>
+		<div class="pop-inner fix">
+			<!-- 登陆 -->
+			<form method="post" action="user_login.html" class="login-form fl" id="login-form">
+				<input type="hidden" value="" name="">
+				<h2 class="tit">7725平台账号登录</h2>
+				<div class="w-form-item item-bord">
+					<label for="username"><i class="i-user"></i></label>
+					<div class="w-item-con">
+						<input type="text" name="username" placeholder="请输入您的用户名" id="username" class="w-input-input">
+					</div>
+				</div>
+				<div class="w-form-item item-bord">
+					<label for="password"><i class="i-lock"></i></label>
+					<div class="w-item-con">
+						<input type="password" name="password" placeholder="请输入您的密码" id="password" class="w-input-input">
+					</div>
+				</div>
+				<div class="w-form-item opt-forget">
+					<!--<a href="forget.php" target="_blank" class="fr">忘记密码?</a>-->
+				</div>
+				<div class="w-form-item w-form-opt">
+					<!--<a href="javascript:;" class="w-login-submit" id="w-login-submit">登 录</a>-->
+					<input type="submit" class="w-login-submit" name='submit' value='登 录' />
+					<!--<p class="opt-reg">还没有7725平台账号？<a href="javascript:alert('暂未开放此功能，敬请期待');">立即注册</a>--></p>
+					<div class="hidden"><input type="submit"></div>
+				</div>
+			</form>
+			<!-- 二维码豪华礼包 -->
+			<div class="qr-lb">
+				<h2 class="tit">领豪华礼包</h2>
+				<img src="__PUBLIC__images/qr.jpg" alt="" width="124">
+				<p class="txt">扫一扫</p>
+			</div>
+		</div>
+	</div>
+	<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+		<div class="modal-dialog modal-sm">
+		  <div class="modal-content">
+			<div class="modal-header">
+			  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+			  <h4 class="modal-title" id="mySmallModalLabel">提示</h4>
+			</div>
+			<div class="modal-body">
+			  暂未开放此功能，敬请期待...
+			</div>
+		  </div><!-- /.modal-content -->
+		</div>
+	</div>
+	<script type="text/javascript" src="__PUBLIC__js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="__PUBLIC__js/bootstrap.min.js"></script>	
+	<script type="text/javascript" src="__PUBLIC__js/main.js"></script>	
+</body>
+</html>

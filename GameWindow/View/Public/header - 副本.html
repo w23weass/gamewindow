@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>{$siteinfo.title}</title>
+	<meta name="keywords" content="{$siteinfo.keywords}">
+	<meta name="description" content="{$siteinfo.description}">
+	<link rel="icon" href="/favicon.ico" type="image/x-icon"/> 
+	<link rel="stylesheet" href="__PUBLIC__css/bootstrap.min.css" />
+	<link rel="stylesheet" href="__PUBLIC__css/style.css" />
+</head>
+<body>
+	<div class="wrapper">
+		<!-- 顶栏 -->
+		<div class="g-top">
+			<div class="g-main">
+				<!-- 登陆状态 -->
+				<div class="g-login">
+					<?php if(empty($_SESSION['user'])){?>
+					<!-- 未登录 -->
+					<div class="g-login-no">
+						<a href="javascript:;" class="g-login-btn">登录</a> |
+						<a href="user_register.html" class="g-reg-btn">注册</a>
+					</div>
+					<?php }else{?>
+					<!-- 已登录 -->
+					<div class="g-login-yes">
+						欢迎您 <span class="g-login-user" id="g-login-user"><?php echo $_SESSION['user']['loginname'];?></span>
+						<a href="user_logout.html" class="g-login-out">注销</a>
+					</div>
+					<?php }?>
+				</div>
+				<!-- 右侧菜单  g-allgame-hover-->
+				<a href="javascript:;" title="全部游戏" class="g-allgame-trigger" id="g-allgame-trigger"></a>
+				<!-- 所有游戏列表 -->
+				<div class="g-allgame-list none" id="g-allgame-list">
+					<div class="g-allgame-hd fix">
+						<strong class="tit fl">手游列表</strong>
+						<span class="type fr">
+							<span> <i class="i-new"></i> 最新游戏</span>
+							<span> <i class="i-hot"></i> 热门游戏</span>
+						</span>
+					</div>
+					<div class="g-allgame-bd fix">
+						<div class="g-allgame-rmd fl">
+							<dl>
+								<dt><strong>热门推荐</strong></dt>
+								<?php $n = 1;?>
+								<?php foreach($headgames['hots'] as $k=>$v){?>
+								<dd><a href="<?php echo empty($v['jumpurl'])?$v['code']:$v['jumpurl'];?>" target="_blank"><?php echo $v['name'];?></a> <?php if($n <= 5) echo '<i class="i-hot"></i>';?></dd>					
+								<?php $n++;}?>
+							</dl>
+						</div>
+						<div class="g-allgame-new fl">
+							<dl>
+								<dt><strong>新品推荐</strong></dt>
+								<?php $n = 1;?>
+								<?php foreach($headgames['news'] as $k=>$v){?>
+								<dd><a href="<?php echo empty($v['jumpurl'])?$v['code']:$v['jumpurl'];?>" target="_blank"><?php echo $v['name'];?></a> <?php if($n <= 10) echo '<i class="i-new"></i>';?></dd>					
+								<?php $n++;}?>
+							</dl>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 菜单栏 -->
+		<div class="g-header">
+			<div class="g-main fix">
+				<a href="/" title="19游戏" class="g-logo fl"> <h1>19游戏</h1> </a>
+				<div class="g-menu fr">					
+					<a href="/" <?php if($model == 'Index') echo 'class="active"';?>>首页</a>
+					<a href="game_index.html" <?php if($model == 'Game') echo 'class="active"';?> >游戏中心</a>
+					<a href="news_index.html" <?php if($model == 'News') echo 'class="active"';?> >新闻公告</a>
+					<a href="about_index.html" <?php if($model == 'About') echo 'class="active"';?> >关于我们</a>
+					<!--<a href="javascript:alert('暂未开放，敬请期待！');">充值</a>-->
+					<!--<a data-toggle="modal" data-target=".bs-example-modal-sm">礼包</a>-->
+					<a href="kefu_index.html" <?php if($model == 'Kefu') echo 'class="active"';?> >客服</a>
+					<!--<a href="javascript:alert('暂未开放，敬请期待！');" >论坛</a>-->
+				</div>
+			</div>
+		</div>

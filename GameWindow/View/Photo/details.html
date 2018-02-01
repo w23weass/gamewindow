@@ -1,0 +1,136 @@
+<include file="Public/header" />	
+		<div class="g-mian">
+			<div class="g-hor-middle">	
+				<div class="main-top">
+					<a href="{$assign['focus_rows'][0]['jumpurl']}"><img src="{$assign['focus_rows'][0]['images']}" width="1180" height="110" /></a>
+				</div>
+				<div class="g-center-hots top20">
+					<div class="content-left fl">
+						<div class="news-type-box">
+							<div class="g-content">						
+								<div class="news-type-mod">
+									<div class="article-hd">
+										<p><span>当前位置：</span> 首页  > 游戏新闻  > {$assign['news_row']['title']} </p>
+									</div>
+								</div>
+							</div>
+						</div>											
+						<div class="article-wrap">							
+							<div class="article-bd">
+								<div class="article-title">
+									<h1>{$assign['news_row']['title']}</h1>
+									<p>时间：{$assign['news_row']['addtime']|date="Y-m-d H:i",###}  &nbsp;&nbsp;&nbsp; 来源：7725游戏</p>
+								</div>
+								<div class="article-text">
+									{$assign['news_row']['content']}
+								</div>
+							</div>							
+						</div>						
+					</div>				
+					<div class="content-right fr">
+						<div class="g-news-images-list">
+								<div class="news-images">
+								<div class="g-content-title">
+									<p class="title-img">火爆活动</p>							
+								</div>
+								<div class="g-content-images">
+									<ul>
+									<foreach name="assign['focus_rows1']" item="vo">
+										<li><a href="{$vo.jumpurl}"><img src="{$vo.images}" width="320" height="100" /></a></li>
+									</foreach>
+									</ul>
+								</div>
+							</div>
+						</div>							
+						<div class="g-hots-list">
+							<div class="g-content-title">							
+								<p class="title">热门游戏榜</p>													
+							</div>
+							<div class="g-content">
+								<ul>
+								<volist name="assign['game_hots_rows']" id="vo">
+									<switch name="{i}">
+									<case value="1" ><li class='active'><em class='rank first' >01</em></case>
+									<case value="2" ><li><em class='rank tow' >02</em></case>
+									<case value="3" ><li><em class='rank third' >03</em></case>
+									<default /><li><em class='rank'><if condition="$i lt '10'">0{$i}<else />{$i}</if></em>
+									</switch>
+										<p class='game-txt'>
+											<strong>{$vo.game_name}</strong><span>{$vo.game_size}</span><span>|</span><span>{$vo.game_type}</span>
+										</p>
+										<div class='game-info fix'>
+											<div class='game-pic'><a href="game_gamedetails.html?id={$vo.gameid}" target='_blank'><img src="{$vo.game_picture}" alt='' width='75' height='75'></a></div>
+											<div class='game-type'>
+												<p><strong><a href="game_gamedetails.html?id={$vo.gameid}" target='_blank' title="{$vo.game_name}">{$vo.game_name}</a></strong></p>
+												<p><span>{$vo.game_type}</span><span>|</span><span>{$vo.game_size}</span></p>
+											</div>
+											<div class='game-opt'>
+												<a href=<if condition="$vo.card_id eq null ">"{$vo.jumpurl}"<else />"gift_giftdetails.html?id={$vo.card_id}"</if>><button class="gift" title="礼包"></button></a>
+												<a href="{$vo.downurl}"><button class="down" title="下载"></button></a>	
+											</div>
+										</div>									
+									</li>
+								</volist>
+								</ul>
+							</div>
+						</div>																														
+					</div>
+				</div>		
+			</div>
+		</div>
+		<div class="g-footer">
+			<div class="g-hor-middle">
+				<div class="g-flink">
+					<span>友情链接：</span>
+					<!-- 循环输出友链 -->
+					<a href="#" target="_blank">72g手游网</a>
+					<a href="#" target="_blank">游戏狗</a>
+					<a href="#" target="_blank">1688wan</a>
+					<a href="#" target="_blank">安锋网</a>
+					<a href="#" target="_blank">07073</a>
+					<a href="#" target="_blank">安趣游戏</a>
+					<a href="#" target="_blank">18183</a>
+					<a href="#" target="_blank">笨手机</a>
+					<a href="#" target="_blank">不凡网</a>
+					<a href="#" target="_blank">超好玩</a>
+					<a href="#" target="_blank">琵琶网</a>
+					<a href="#" target="_blank">游戏多</a>
+					<a href="#" target="_blank">口袋巴士</a>
+					<a href="#" target="_blank">魔方网</a>
+				</div>
+				<div class="company-info fix">
+					<div class="footer-logo fl"><a href="http://www.19you.com/" title="7725游戏" ></a></div>
+					<div class="cpinfo fl">
+						<p class="cplink">
+							<a href="#" target="_blank">公司简介</a> - 
+							<a href="#" target="_blank">客户服务</a> - 
+							<a href="#" target="_blank">免责声明</a> - 
+							<a href="#" target="_blank">7725游戏</a> - 
+							<a href="#" target="_blank">联系我们</a> - 
+							<a href="#" target="_blank">商务合作</a> - 
+							<a href="#" target="_blank">加入我们</a>
+						</p>
+						<p>广州杰茜卡信息科技有限公司   版权所有  <a style="color:#999999;" href='http://www.miitbeian.gov.cn' target='blank'>粤ICP备17000485号-1</a>  <a style="color:#999999;" href='http://resource.7725.com/Home/杰茜卡-文网文.jpg' target='blank'>粤网文[2017] 1854-227号 </a></p>
+						<p>文化部网络游戏举报和联系电子邮箱：wlwh@vip.sina.com</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="Public/Static/www/js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="Public/Static/www/js/main.js"></script>
+	<script>
+		//手风琴动画效果
+		var _index = 0;
+		$(".images-slide ul li").mouseover(function(){
+			_index = $(this).index();
+			$(this).stop().stop().animate({width:615},320).siblings("li").stop().animate({width:140},320);
+			$(".imgTop img").eq(_index).addClass("tm").siblings(".imgTop img").removeClass("tm");
+		});
+		//右侧显示转换效果
+		$('.g-hots-list .g-content li').mouseenter(function(){
+			$(this).addClass('active').siblings().removeClass('active');
+		})
+	</script>
+</body>
+</html>
